@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Solv Catalog</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+
+
+  <!-- Header -->
+
+  <header class="bg-white shadow py-4 px-6 flex justify-between items-center">
+
+    <h1 class="text-2xl font-bold text-orange-600">Solv</h1>
+
+    <a href="#order" class="text-orange-600 font-semibold hover:underline">Place Order</a>
+
+  </header>
+
+
+
+  <!-- Product Catalog -->
+
+  <section class="py-12 px-6 max-w-6xl mx-auto">
+
+    <h2 class="text-3xl font-bold text-center text-orange-600 mb-10">Mill-Direct Products</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="bg-white border rounded shadow p-4">
+
+        <img src="https://source.unsplash.com/400x300/?steel,factory" class="mb-3" />
+
+        <h3 class="font-semibold text-lg">Hot Rolled Coils</h3>
+
+        <p class="text-sm text-gray-600">Price: ₹52,000/ton</p>
+
+        <button class="mt-2 text-sm text-orange-600 hover:underline" onclick="scrollToOrder('Hot Rolled Coils')">Order Now</button>
+
+      </div>
+
+      <div class="bg-white border rounded shadow p-4">
+
+        <img src="https://source.unsplash.com/400x300/?cement,bulk" class="mb-3" />
+
+        <h3 class="font-semibold text-lg">Industrial Cement</h3>
+
+        <p class="text-sm text-gray-600">Price: ₹260/bag</p>
+
+        <button class="mt-2 text-sm text-orange-600 hover:underline" onclick="scrollToOrder('Industrial Cement')">Order Now</button>
+
+      </div>
+
+      <div class="bg-white border rounded shadow p-4">
+
+        <img src="https://source.unsplash.com/400x300/?pipes,industry" class="mb-3" />
+
+        <h3 class="font-semibold text-lg">Galvanized Pipes</h3>
+
+        <p class="text-sm text-gray-600">Price: ₹110/meter</p>
+
+        <button class="mt-2 text-sm text-orange-600 hover:underline" onclick="scrollToOrder('Galvanized Pipes')">Order Now</button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Order Form -->
+
+  <section id="order" class="bg-white py-12 px-6 max-w-2xl mx-auto rounded shadow">
+
+    <h2 class="text-2xl font-bold text-orange-600 mb-6">Place a Bulk Order</h2>
+
+    <form>
+
+      <label class="block mb-2 font-semibold">Product</label>
+
+      <input id="productInput" type="text" placeholder="Enter product name" class="w-full p-3 border rounded mb-4" />
+
+
+
+      <label class="block mb-2 font-semibold">Quantity</label>
+
+      <input type="number" placeholder="Enter quantity" class="w-full p-3 border rounded mb-4" />
+
+
+
+      <label class="block mb-2 font-semibold">Company Name</label>
+
+      <input type="text" placeholder="Your company name" class="w-full p-3 border rounded mb-4" />
+
+
+
+      <label class="block mb-2 font-semibold">Email / Phone</label>
+
+      <input type="text" placeholder="How should we contact you?" class="w-full p-3 border rounded mb-4" />
+
+
+
+      <button type="submit" class="bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700">Submit Order</button>
+
+    </form>
+
+  </section>
+
+
+
+  <script>
+
+    function scrollToOrder(product) {
+
+      document.getElementById('productInput').value = product;
+
+      document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>
+
